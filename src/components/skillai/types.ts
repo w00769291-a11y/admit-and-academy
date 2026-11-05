@@ -1,0 +1,15 @@
+// @ts-nocheck
+export type Priority = 'Critical' | 'High' | 'Medium' | 'Low'
+export type ApprovalStatus = 'Pending' | 'Approved' | 'Rejected' | 'Returned'
+export type TaskStatus = 'Not Started' | 'In Progress' | 'Submitted for Review' | 'Completed' | 'Blocked'
+export interface Department { id: string; name: string; short: string; headId: string; students: number; target: number; achievement: number; budget: number; spent: number }
+export interface Staff { id: string; name: string; designation: string; departmentId: string; email: string; phone: string; tasksAssigned: number; tasksCompleted: number; onTime: number; attendance: number; goal: number; quality: number; workload: 'Light' | 'Balanced' | 'Heavy' }
+export interface ApprovalComment { author: string; text: string; date: string }
+export interface Approval { id: string; title: string; category: string; applicant: string; applicantId: string; departmentId: string; date: string; priority: Priority; amount?: number; status: ApprovalStatus; description: string; justification: string; attachments: string[]; comments: ApprovalComment[]; history: { date: string; action: string; actor: string }[]; awaitingInfo?: boolean; requestedDates?: string }
+export interface Task { id: string; title: string; category: string; departmentId: string; responsibleId: string; teamIds: string[]; priority: Priority; status: TaskStatus; startDate: string; dueDate: string; dueTime?: string; progress: number; description: string; outcome: string; instructions: string; dependencies: string[]; attachments: string[]; notes: string; blockedReason?: string; submittedNote?: string; delayReason?: string; comments: ApprovalComment[]; createdAt: string }
+export interface NotificationItem { id: string; title: string; description: string; date: string; category: 'Approval' | 'Task' | 'Deadline' | 'Overdue' | 'Performance' | 'System'; read: boolean; link: string; recordId?: string }
+export interface ActivityItem { id: string; date: string; actor: string; action: string; recordType: string; recordId: string; description: string; from?: string; to?: string }
+export interface Settings { instituteName: string; academicYear: string; reportingPeriod: string; theme: 'light' | 'dark'; sidebar: 'expanded' | 'collapsed'; density: 'comfortable' | 'compact'; notifyApprovals: boolean; notifyDeadlines: boolean; notifyOverdue: boolean; notifyPerformance: boolean }
+export interface Profile { name: string; designation: string; email: string; phone: string; office: string }
+export const CATEGORIES = ['Staff Leave Requests','Purchase and Procurement','Department Budget and Expenses','Event, Seminar and Workshop Proposals','Infrastructure and Maintenance','Fee Concession','Other Administrative Requests']
+export const TASK_CATEGORIES = ['Academic','Administration','Admissions','Examinations','Infrastructure','Events','Finance','Quality Assurance','Student Welfare']
