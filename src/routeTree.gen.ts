@@ -10,33 +10,549 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AcademicRouteImport } from './routes/academic'
+import { Route as AdminRouteImport } from './routes/admin'
+import { Route as AdmissionRouteImport } from './routes/admission'
+import { Route as DirectorsRouteImport } from './routes/directors'
+import { Route as FinanceRouteImport } from './routes/finance'
+import { Route as HrRouteImport } from './routes/hr'
+import { Route as MarketingRouteImport } from './routes/marketing'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as WorkspaceRouteImport } from './routes/workspace'
+import { Route as AdmissionIndexRouteImport } from './routes/admission.index'
+import { Route as AdmissionAgentsRouteImport } from './routes/admission.agents'
+import { Route as AdmissionApplicationRouteImport } from './routes/admission.application'
+import { Route as AdmissionApplicationsRouteImport } from './routes/admission.applications'
+import { Route as AdmissionCallCenterRouteImport } from './routes/admission.call-center'
+import { Route as AdmissionFeeConcessionRouteImport } from './routes/admission.fee-concession'
+import { Route as AdmissionFinanceRouteImport } from './routes/admission.finance'
+import { Route as AdmissionFollowUpRouteImport } from './routes/admission.follow-up'
+import { Route as AdmissionFormBuilderRouteImport } from './routes/admission.form-builder'
+import { Route as AdmissionLeadsRouteImport } from './routes/admission.leads'
+import { Route as AgentIdRouteImport } from './routes/agent.$id'
+import { Route as DirectorsIndexRouteImport } from './routes/directors.index'
+import { Route as DirectorsActivityRouteImport } from './routes/directors.activity'
+import { Route as DirectorsApprovalsRouteImport } from './routes/directors.approvals'
+import { Route as DirectorsDepartmentsRouteImport } from './routes/directors.departments'
+import { Route as DirectorsInstituteRouteImport } from './routes/directors.institute'
+import { Route as DirectorsNotificationsRouteImport } from './routes/directors.notifications'
+import { Route as DirectorsPerformanceRouteImport } from './routes/directors.performance'
+import { Route as DirectorsProfileRouteImport } from './routes/directors.profile'
+import { Route as DirectorsReportsRouteImport } from './routes/directors.reports'
+import { Route as DirectorsSettingsRouteImport } from './routes/directors.settings'
+import { Route as DirectorsTasksRouteImport } from './routes/directors.tasks'
+import { Route as AdmissionAgentsIndexRouteImport } from './routes/admission.agents.index'
+import { Route as AdmissionAgentsIdRouteImport } from './routes/admission.agents.$id'
+import { Route as AdmissionApplicationsIdRouteImport } from './routes/admission.applications.$id'
+import { Route as AdmissionCallCenterIndexRouteImport } from './routes/admission.call-center.index'
+import { Route as AdmissionCallCenterAgentsRouteImport } from './routes/admission.call-center.agents'
+import { Route as AdmissionCallCenterLeadsRouteImport } from './routes/admission.call-center.leads'
+import { Route as AdmissionCallCenterMyLeadsRouteImport } from './routes/admission.call-center.my-leads'
+import { Route as AdmissionCallCenterReportsRouteImport } from './routes/admission.call-center.reports'
+import { Route as AdmissionCallCenterUploadRouteImport } from './routes/admission.call-center.upload'
+import { Route as DirectorsSkillaiIndexRouteImport } from './routes/directors.skillai.index'
+import { Route as DirectorsSkillaiSplatRouteImport } from './routes/directors.skillai.$'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AcademicRoute = AcademicRouteImport.update({
+  id: '/academic',
+  path: '/academic',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdmissionRoute = AdmissionRouteImport.update({
+  id: '/admission',
+  path: '/admission',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DirectorsRoute = DirectorsRouteImport.update({
+  id: '/directors',
+  path: '/directors',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FinanceRoute = FinanceRouteImport.update({
+  id: '/finance',
+  path: '/finance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HrRoute = HrRouteImport.update({
+  id: '/hr',
+  path: '/hr',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketingRoute = MarketingRouteImport.update({
+  id: '/marketing',
+  path: '/marketing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkspaceRoute = WorkspaceRouteImport.update({
+  id: '/workspace',
+  path: '/workspace',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdmissionIndexRoute = AdmissionIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AdmissionRoute,
+} as any)
+const AdmissionAgentsRoute = AdmissionAgentsRouteImport.update({
+  id: '/agents',
+  path: '/agents',
+  getParentRoute: () => AdmissionRoute,
+} as any)
+const AdmissionApplicationRoute = AdmissionApplicationRouteImport.update({
+  id: '/application',
+  path: '/application',
+  getParentRoute: () => AdmissionRoute,
+} as any)
+const AdmissionApplicationsRoute = AdmissionApplicationsRouteImport.update({
+  id: '/applications',
+  path: '/applications',
+  getParentRoute: () => AdmissionRoute,
+} as any)
+const AdmissionCallCenterRoute = AdmissionCallCenterRouteImport.update({
+  id: '/call-center',
+  path: '/call-center',
+  getParentRoute: () => AdmissionRoute,
+} as any)
+const AdmissionFeeConcessionRoute = AdmissionFeeConcessionRouteImport.update({
+  id: '/fee-concession',
+  path: '/fee-concession',
+  getParentRoute: () => AdmissionRoute,
+} as any)
+const AdmissionFinanceRoute = AdmissionFinanceRouteImport.update({
+  id: '/finance',
+  path: '/finance',
+  getParentRoute: () => AdmissionRoute,
+} as any)
+const AdmissionFollowUpRoute = AdmissionFollowUpRouteImport.update({
+  id: '/follow-up',
+  path: '/follow-up',
+  getParentRoute: () => AdmissionRoute,
+} as any)
+const AdmissionFormBuilderRoute = AdmissionFormBuilderRouteImport.update({
+  id: '/form-builder',
+  path: '/form-builder',
+  getParentRoute: () => AdmissionRoute,
+} as any)
+const AdmissionLeadsRoute = AdmissionLeadsRouteImport.update({
+  id: '/leads',
+  path: '/leads',
+  getParentRoute: () => AdmissionRoute,
+} as any)
+const AgentIdRoute = AgentIdRouteImport.update({
+  id: '/agent/$id',
+  path: '/agent/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DirectorsIndexRoute = DirectorsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => DirectorsRoute,
+} as any)
+const DirectorsActivityRoute = DirectorsActivityRouteImport.update({
+  id: '/activity',
+  path: '/activity',
+  getParentRoute: () => DirectorsRoute,
+} as any)
+const DirectorsApprovalsRoute = DirectorsApprovalsRouteImport.update({
+  id: '/approvals',
+  path: '/approvals',
+  getParentRoute: () => DirectorsRoute,
+} as any)
+const DirectorsDepartmentsRoute = DirectorsDepartmentsRouteImport.update({
+  id: '/departments',
+  path: '/departments',
+  getParentRoute: () => DirectorsRoute,
+} as any)
+const DirectorsInstituteRoute = DirectorsInstituteRouteImport.update({
+  id: '/institute',
+  path: '/institute',
+  getParentRoute: () => DirectorsRoute,
+} as any)
+const DirectorsNotificationsRoute = DirectorsNotificationsRouteImport.update({
+  id: '/notifications',
+  path: '/notifications',
+  getParentRoute: () => DirectorsRoute,
+} as any)
+const DirectorsPerformanceRoute = DirectorsPerformanceRouteImport.update({
+  id: '/performance',
+  path: '/performance',
+  getParentRoute: () => DirectorsRoute,
+} as any)
+const DirectorsProfileRoute = DirectorsProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => DirectorsRoute,
+} as any)
+const DirectorsReportsRoute = DirectorsReportsRouteImport.update({
+  id: '/reports',
+  path: '/reports',
+  getParentRoute: () => DirectorsRoute,
+} as any)
+const DirectorsSettingsRoute = DirectorsSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => DirectorsRoute,
+} as any)
+const DirectorsTasksRoute = DirectorsTasksRouteImport.update({
+  id: '/tasks',
+  path: '/tasks',
+  getParentRoute: () => DirectorsRoute,
+} as any)
+const AdmissionAgentsIndexRoute = AdmissionAgentsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AdmissionAgentsRoute,
+} as any)
+const AdmissionAgentsIdRoute = AdmissionAgentsIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => AdmissionAgentsRoute,
+} as any)
+const AdmissionApplicationsIdRoute = AdmissionApplicationsIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => AdmissionApplicationsRoute,
+} as any)
+const AdmissionCallCenterIndexRoute =
+  AdmissionCallCenterIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => AdmissionCallCenterRoute,
+  } as any)
+const AdmissionCallCenterAgentsRoute =
+  AdmissionCallCenterAgentsRouteImport.update({
+    id: '/agents',
+    path: '/agents',
+    getParentRoute: () => AdmissionCallCenterRoute,
+  } as any)
+const AdmissionCallCenterLeadsRoute =
+  AdmissionCallCenterLeadsRouteImport.update({
+    id: '/leads',
+    path: '/leads',
+    getParentRoute: () => AdmissionCallCenterRoute,
+  } as any)
+const AdmissionCallCenterMyLeadsRoute =
+  AdmissionCallCenterMyLeadsRouteImport.update({
+    id: '/my-leads',
+    path: '/my-leads',
+    getParentRoute: () => AdmissionCallCenterRoute,
+  } as any)
+const AdmissionCallCenterReportsRoute =
+  AdmissionCallCenterReportsRouteImport.update({
+    id: '/reports',
+    path: '/reports',
+    getParentRoute: () => AdmissionCallCenterRoute,
+  } as any)
+const AdmissionCallCenterUploadRoute =
+  AdmissionCallCenterUploadRouteImport.update({
+    id: '/upload',
+    path: '/upload',
+    getParentRoute: () => AdmissionCallCenterRoute,
+  } as any)
+const DirectorsSkillaiIndexRoute = DirectorsSkillaiIndexRouteImport.update({
+  id: '/skillai/',
+  path: '/skillai/',
+  getParentRoute: () => DirectorsRoute,
+} as any)
+const DirectorsSkillaiSplatRoute = DirectorsSkillaiSplatRouteImport.update({
+  id: '/skillai/$',
+  path: '/skillai/$',
+  getParentRoute: () => DirectorsRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/academic': typeof AcademicRoute
+  '/admin': typeof AdminRoute
+  '/admission': typeof AdmissionRouteWithChildren
+  '/directors': typeof DirectorsRouteWithChildren
+  '/finance': typeof FinanceRoute
+  '/hr': typeof HrRoute
+  '/marketing': typeof MarketingRoute
+  '/settings': typeof SettingsRoute
+  '/workspace': typeof WorkspaceRoute
+  '/admission/agents': typeof AdmissionAgentsRouteWithChildren
+  '/admission/application': typeof AdmissionApplicationRoute
+  '/admission/applications': typeof AdmissionApplicationsRouteWithChildren
+  '/admission/call-center': typeof AdmissionCallCenterRouteWithChildren
+  '/admission/fee-concession': typeof AdmissionFeeConcessionRoute
+  '/admission/finance': typeof AdmissionFinanceRoute
+  '/admission/follow-up': typeof AdmissionFollowUpRoute
+  '/admission/form-builder': typeof AdmissionFormBuilderRoute
+  '/admission/leads': typeof AdmissionLeadsRoute
+  '/agent/$id': typeof AgentIdRoute
+  '/directors/activity': typeof DirectorsActivityRoute
+  '/directors/approvals': typeof DirectorsApprovalsRoute
+  '/directors/departments': typeof DirectorsDepartmentsRoute
+  '/directors/institute': typeof DirectorsInstituteRoute
+  '/directors/notifications': typeof DirectorsNotificationsRoute
+  '/directors/performance': typeof DirectorsPerformanceRoute
+  '/directors/profile': typeof DirectorsProfileRoute
+  '/directors/reports': typeof DirectorsReportsRoute
+  '/directors/settings': typeof DirectorsSettingsRoute
+  '/directors/tasks': typeof DirectorsTasksRoute
+  '/admission/': typeof AdmissionIndexRoute
+  '/directors/': typeof DirectorsIndexRoute
+  '/admission/agents/$id': typeof AdmissionAgentsIdRoute
+  '/admission/applications/$id': typeof AdmissionApplicationsIdRoute
+  '/admission/call-center/agents': typeof AdmissionCallCenterAgentsRoute
+  '/admission/call-center/leads': typeof AdmissionCallCenterLeadsRoute
+  '/admission/call-center/my-leads': typeof AdmissionCallCenterMyLeadsRoute
+  '/admission/call-center/reports': typeof AdmissionCallCenterReportsRoute
+  '/admission/call-center/upload': typeof AdmissionCallCenterUploadRoute
+  '/directors/skillai/$': typeof DirectorsSkillaiSplatRoute
+  '/admission/agents/': typeof AdmissionAgentsIndexRoute
+  '/admission/call-center/': typeof AdmissionCallCenterIndexRoute
+  '/directors/skillai/': typeof DirectorsSkillaiIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/academic': typeof AcademicRoute
+  '/admin': typeof AdminRoute
+  '/finance': typeof FinanceRoute
+  '/hr': typeof HrRoute
+  '/marketing': typeof MarketingRoute
+  '/settings': typeof SettingsRoute
+  '/workspace': typeof WorkspaceRoute
+  '/admission/application': typeof AdmissionApplicationRoute
+  '/admission/applications': typeof AdmissionApplicationsRouteWithChildren
+  '/admission/fee-concession': typeof AdmissionFeeConcessionRoute
+  '/admission/finance': typeof AdmissionFinanceRoute
+  '/admission/follow-up': typeof AdmissionFollowUpRoute
+  '/admission/form-builder': typeof AdmissionFormBuilderRoute
+  '/admission/leads': typeof AdmissionLeadsRoute
+  '/agent/$id': typeof AgentIdRoute
+  '/directors/activity': typeof DirectorsActivityRoute
+  '/directors/approvals': typeof DirectorsApprovalsRoute
+  '/directors/departments': typeof DirectorsDepartmentsRoute
+  '/directors/institute': typeof DirectorsInstituteRoute
+  '/directors/notifications': typeof DirectorsNotificationsRoute
+  '/directors/performance': typeof DirectorsPerformanceRoute
+  '/directors/profile': typeof DirectorsProfileRoute
+  '/directors/reports': typeof DirectorsReportsRoute
+  '/directors/settings': typeof DirectorsSettingsRoute
+  '/directors/tasks': typeof DirectorsTasksRoute
+  '/admission': typeof AdmissionIndexRoute
+  '/directors': typeof DirectorsIndexRoute
+  '/admission/agents/$id': typeof AdmissionAgentsIdRoute
+  '/admission/applications/$id': typeof AdmissionApplicationsIdRoute
+  '/admission/call-center/agents': typeof AdmissionCallCenterAgentsRoute
+  '/admission/call-center/leads': typeof AdmissionCallCenterLeadsRoute
+  '/admission/call-center/my-leads': typeof AdmissionCallCenterMyLeadsRoute
+  '/admission/call-center/reports': typeof AdmissionCallCenterReportsRoute
+  '/admission/call-center/upload': typeof AdmissionCallCenterUploadRoute
+  '/directors/skillai/$': typeof DirectorsSkillaiSplatRoute
+  '/admission/agents': typeof AdmissionAgentsIndexRoute
+  '/admission/call-center': typeof AdmissionCallCenterIndexRoute
+  '/directors/skillai': typeof DirectorsSkillaiIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/academic': typeof AcademicRoute
+  '/admin': typeof AdminRoute
+  '/admission': typeof AdmissionRouteWithChildren
+  '/directors': typeof DirectorsRouteWithChildren
+  '/finance': typeof FinanceRoute
+  '/hr': typeof HrRoute
+  '/marketing': typeof MarketingRoute
+  '/settings': typeof SettingsRoute
+  '/workspace': typeof WorkspaceRoute
+  '/admission/agents': typeof AdmissionAgentsRouteWithChildren
+  '/admission/application': typeof AdmissionApplicationRoute
+  '/admission/applications': typeof AdmissionApplicationsRouteWithChildren
+  '/admission/call-center': typeof AdmissionCallCenterRouteWithChildren
+  '/admission/fee-concession': typeof AdmissionFeeConcessionRoute
+  '/admission/finance': typeof AdmissionFinanceRoute
+  '/admission/follow-up': typeof AdmissionFollowUpRoute
+  '/admission/form-builder': typeof AdmissionFormBuilderRoute
+  '/admission/leads': typeof AdmissionLeadsRoute
+  '/agent/$id': typeof AgentIdRoute
+  '/directors/activity': typeof DirectorsActivityRoute
+  '/directors/approvals': typeof DirectorsApprovalsRoute
+  '/directors/departments': typeof DirectorsDepartmentsRoute
+  '/directors/institute': typeof DirectorsInstituteRoute
+  '/directors/notifications': typeof DirectorsNotificationsRoute
+  '/directors/performance': typeof DirectorsPerformanceRoute
+  '/directors/profile': typeof DirectorsProfileRoute
+  '/directors/reports': typeof DirectorsReportsRoute
+  '/directors/settings': typeof DirectorsSettingsRoute
+  '/directors/tasks': typeof DirectorsTasksRoute
+  '/admission/': typeof AdmissionIndexRoute
+  '/directors/': typeof DirectorsIndexRoute
+  '/admission/agents/$id': typeof AdmissionAgentsIdRoute
+  '/admission/applications/$id': typeof AdmissionApplicationsIdRoute
+  '/admission/call-center/agents': typeof AdmissionCallCenterAgentsRoute
+  '/admission/call-center/leads': typeof AdmissionCallCenterLeadsRoute
+  '/admission/call-center/my-leads': typeof AdmissionCallCenterMyLeadsRoute
+  '/admission/call-center/reports': typeof AdmissionCallCenterReportsRoute
+  '/admission/call-center/upload': typeof AdmissionCallCenterUploadRoute
+  '/directors/skillai/$': typeof DirectorsSkillaiSplatRoute
+  '/admission/agents/': typeof AdmissionAgentsIndexRoute
+  '/admission/call-center/': typeof AdmissionCallCenterIndexRoute
+  '/directors/skillai/': typeof DirectorsSkillaiIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/academic'
+    | '/admin'
+    | '/admission'
+    | '/directors'
+    | '/finance'
+    | '/hr'
+    | '/marketing'
+    | '/settings'
+    | '/workspace'
+    | '/admission/agents'
+    | '/admission/application'
+    | '/admission/applications'
+    | '/admission/call-center'
+    | '/admission/fee-concession'
+    | '/admission/finance'
+    | '/admission/follow-up'
+    | '/admission/form-builder'
+    | '/admission/leads'
+    | '/agent/$id'
+    | '/directors/activity'
+    | '/directors/approvals'
+    | '/directors/departments'
+    | '/directors/institute'
+    | '/directors/notifications'
+    | '/directors/performance'
+    | '/directors/profile'
+    | '/directors/reports'
+    | '/directors/settings'
+    | '/directors/tasks'
+    | '/admission/'
+    | '/directors/'
+    | '/admission/agents/$id'
+    | '/admission/applications/$id'
+    | '/admission/call-center/agents'
+    | '/admission/call-center/leads'
+    | '/admission/call-center/my-leads'
+    | '/admission/call-center/reports'
+    | '/admission/call-center/upload'
+    | '/directors/skillai/$'
+    | '/admission/agents/'
+    | '/admission/call-center/'
+    | '/directors/skillai/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/academic'
+    | '/admin'
+    | '/finance'
+    | '/hr'
+    | '/marketing'
+    | '/settings'
+    | '/workspace'
+    | '/admission/application'
+    | '/admission/applications'
+    | '/admission/fee-concession'
+    | '/admission/finance'
+    | '/admission/follow-up'
+    | '/admission/form-builder'
+    | '/admission/leads'
+    | '/agent/$id'
+    | '/directors/activity'
+    | '/directors/approvals'
+    | '/directors/departments'
+    | '/directors/institute'
+    | '/directors/notifications'
+    | '/directors/performance'
+    | '/directors/profile'
+    | '/directors/reports'
+    | '/directors/settings'
+    | '/directors/tasks'
+    | '/admission'
+    | '/directors'
+    | '/admission/agents/$id'
+    | '/admission/applications/$id'
+    | '/admission/call-center/agents'
+    | '/admission/call-center/leads'
+    | '/admission/call-center/my-leads'
+    | '/admission/call-center/reports'
+    | '/admission/call-center/upload'
+    | '/directors/skillai/$'
+    | '/admission/agents'
+    | '/admission/call-center'
+    | '/directors/skillai'
+  id:
+    | '__root__'
+    | '/'
+    | '/academic'
+    | '/admin'
+    | '/admission'
+    | '/directors'
+    | '/finance'
+    | '/hr'
+    | '/marketing'
+    | '/settings'
+    | '/workspace'
+    | '/admission/agents'
+    | '/admission/application'
+    | '/admission/applications'
+    | '/admission/call-center'
+    | '/admission/fee-concession'
+    | '/admission/finance'
+    | '/admission/follow-up'
+    | '/admission/form-builder'
+    | '/admission/leads'
+    | '/agent/$id'
+    | '/directors/activity'
+    | '/directors/approvals'
+    | '/directors/departments'
+    | '/directors/institute'
+    | '/directors/notifications'
+    | '/directors/performance'
+    | '/directors/profile'
+    | '/directors/reports'
+    | '/directors/settings'
+    | '/directors/tasks'
+    | '/admission/'
+    | '/directors/'
+    | '/admission/agents/$id'
+    | '/admission/applications/$id'
+    | '/admission/call-center/agents'
+    | '/admission/call-center/leads'
+    | '/admission/call-center/my-leads'
+    | '/admission/call-center/reports'
+    | '/admission/call-center/upload'
+    | '/directors/skillai/$'
+    | '/admission/agents/'
+    | '/admission/call-center/'
+    | '/directors/skillai/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AcademicRoute: typeof AcademicRoute
+  AdminRoute: typeof AdminRoute
+  AdmissionRoute: typeof AdmissionRouteWithChildren
+  DirectorsRoute: typeof DirectorsRouteWithChildren
+  FinanceRoute: typeof FinanceRoute
+  HrRoute: typeof HrRoute
+  MarketingRoute: typeof MarketingRoute
+  SettingsRoute: typeof SettingsRoute
+  WorkspaceRoute: typeof WorkspaceRoute
+  AgentIdRoute: typeof AgentIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +564,429 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/academic': {
+      id: '/academic'
+      path: '/academic'
+      fullPath: '/academic'
+      preLoaderRoute: typeof AcademicRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admission': {
+      id: '/admission'
+      path: '/admission'
+      fullPath: '/admission'
+      preLoaderRoute: typeof AdmissionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/directors': {
+      id: '/directors'
+      path: '/directors'
+      fullPath: '/directors'
+      preLoaderRoute: typeof DirectorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/finance': {
+      id: '/finance'
+      path: '/finance'
+      fullPath: '/finance'
+      preLoaderRoute: typeof FinanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hr': {
+      id: '/hr'
+      path: '/hr'
+      fullPath: '/hr'
+      preLoaderRoute: typeof HrRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/marketing': {
+      id: '/marketing'
+      path: '/marketing'
+      fullPath: '/marketing'
+      preLoaderRoute: typeof MarketingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/workspace': {
+      id: '/workspace'
+      path: '/workspace'
+      fullPath: '/workspace'
+      preLoaderRoute: typeof WorkspaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admission/': {
+      id: '/admission/'
+      path: '/'
+      fullPath: '/admission/'
+      preLoaderRoute: typeof AdmissionIndexRouteImport
+      parentRoute: typeof AdmissionRoute
+    }
+    '/admission/agents': {
+      id: '/admission/agents'
+      path: '/agents'
+      fullPath: '/admission/agents'
+      preLoaderRoute: typeof AdmissionAgentsRouteImport
+      parentRoute: typeof AdmissionRoute
+    }
+    '/admission/application': {
+      id: '/admission/application'
+      path: '/application'
+      fullPath: '/admission/application'
+      preLoaderRoute: typeof AdmissionApplicationRouteImport
+      parentRoute: typeof AdmissionRoute
+    }
+    '/admission/applications': {
+      id: '/admission/applications'
+      path: '/applications'
+      fullPath: '/admission/applications'
+      preLoaderRoute: typeof AdmissionApplicationsRouteImport
+      parentRoute: typeof AdmissionRoute
+    }
+    '/admission/call-center': {
+      id: '/admission/call-center'
+      path: '/call-center'
+      fullPath: '/admission/call-center'
+      preLoaderRoute: typeof AdmissionCallCenterRouteImport
+      parentRoute: typeof AdmissionRoute
+    }
+    '/admission/fee-concession': {
+      id: '/admission/fee-concession'
+      path: '/fee-concession'
+      fullPath: '/admission/fee-concession'
+      preLoaderRoute: typeof AdmissionFeeConcessionRouteImport
+      parentRoute: typeof AdmissionRoute
+    }
+    '/admission/finance': {
+      id: '/admission/finance'
+      path: '/finance'
+      fullPath: '/admission/finance'
+      preLoaderRoute: typeof AdmissionFinanceRouteImport
+      parentRoute: typeof AdmissionRoute
+    }
+    '/admission/follow-up': {
+      id: '/admission/follow-up'
+      path: '/follow-up'
+      fullPath: '/admission/follow-up'
+      preLoaderRoute: typeof AdmissionFollowUpRouteImport
+      parentRoute: typeof AdmissionRoute
+    }
+    '/admission/form-builder': {
+      id: '/admission/form-builder'
+      path: '/form-builder'
+      fullPath: '/admission/form-builder'
+      preLoaderRoute: typeof AdmissionFormBuilderRouteImport
+      parentRoute: typeof AdmissionRoute
+    }
+    '/admission/leads': {
+      id: '/admission/leads'
+      path: '/leads'
+      fullPath: '/admission/leads'
+      preLoaderRoute: typeof AdmissionLeadsRouteImport
+      parentRoute: typeof AdmissionRoute
+    }
+    '/agent/$id': {
+      id: '/agent/$id'
+      path: '/agent/$id'
+      fullPath: '/agent/$id'
+      preLoaderRoute: typeof AgentIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/directors/': {
+      id: '/directors/'
+      path: '/'
+      fullPath: '/directors/'
+      preLoaderRoute: typeof DirectorsIndexRouteImport
+      parentRoute: typeof DirectorsRoute
+    }
+    '/directors/activity': {
+      id: '/directors/activity'
+      path: '/activity'
+      fullPath: '/directors/activity'
+      preLoaderRoute: typeof DirectorsActivityRouteImport
+      parentRoute: typeof DirectorsRoute
+    }
+    '/directors/approvals': {
+      id: '/directors/approvals'
+      path: '/approvals'
+      fullPath: '/directors/approvals'
+      preLoaderRoute: typeof DirectorsApprovalsRouteImport
+      parentRoute: typeof DirectorsRoute
+    }
+    '/directors/departments': {
+      id: '/directors/departments'
+      path: '/departments'
+      fullPath: '/directors/departments'
+      preLoaderRoute: typeof DirectorsDepartmentsRouteImport
+      parentRoute: typeof DirectorsRoute
+    }
+    '/directors/institute': {
+      id: '/directors/institute'
+      path: '/institute'
+      fullPath: '/directors/institute'
+      preLoaderRoute: typeof DirectorsInstituteRouteImport
+      parentRoute: typeof DirectorsRoute
+    }
+    '/directors/notifications': {
+      id: '/directors/notifications'
+      path: '/notifications'
+      fullPath: '/directors/notifications'
+      preLoaderRoute: typeof DirectorsNotificationsRouteImport
+      parentRoute: typeof DirectorsRoute
+    }
+    '/directors/performance': {
+      id: '/directors/performance'
+      path: '/performance'
+      fullPath: '/directors/performance'
+      preLoaderRoute: typeof DirectorsPerformanceRouteImport
+      parentRoute: typeof DirectorsRoute
+    }
+    '/directors/profile': {
+      id: '/directors/profile'
+      path: '/profile'
+      fullPath: '/directors/profile'
+      preLoaderRoute: typeof DirectorsProfileRouteImport
+      parentRoute: typeof DirectorsRoute
+    }
+    '/directors/reports': {
+      id: '/directors/reports'
+      path: '/reports'
+      fullPath: '/directors/reports'
+      preLoaderRoute: typeof DirectorsReportsRouteImport
+      parentRoute: typeof DirectorsRoute
+    }
+    '/directors/settings': {
+      id: '/directors/settings'
+      path: '/settings'
+      fullPath: '/directors/settings'
+      preLoaderRoute: typeof DirectorsSettingsRouteImport
+      parentRoute: typeof DirectorsRoute
+    }
+    '/directors/tasks': {
+      id: '/directors/tasks'
+      path: '/tasks'
+      fullPath: '/directors/tasks'
+      preLoaderRoute: typeof DirectorsTasksRouteImport
+      parentRoute: typeof DirectorsRoute
+    }
+    '/admission/agents/': {
+      id: '/admission/agents/'
+      path: '/'
+      fullPath: '/admission/agents/'
+      preLoaderRoute: typeof AdmissionAgentsIndexRouteImport
+      parentRoute: typeof AdmissionAgentsRoute
+    }
+    '/admission/agents/$id': {
+      id: '/admission/agents/$id'
+      path: '/$id'
+      fullPath: '/admission/agents/$id'
+      preLoaderRoute: typeof AdmissionAgentsIdRouteImport
+      parentRoute: typeof AdmissionAgentsRoute
+    }
+    '/admission/applications/$id': {
+      id: '/admission/applications/$id'
+      path: '/$id'
+      fullPath: '/admission/applications/$id'
+      preLoaderRoute: typeof AdmissionApplicationsIdRouteImport
+      parentRoute: typeof AdmissionApplicationsRoute
+    }
+    '/admission/call-center/': {
+      id: '/admission/call-center/'
+      path: '/'
+      fullPath: '/admission/call-center/'
+      preLoaderRoute: typeof AdmissionCallCenterIndexRouteImport
+      parentRoute: typeof AdmissionCallCenterRoute
+    }
+    '/admission/call-center/agents': {
+      id: '/admission/call-center/agents'
+      path: '/agents'
+      fullPath: '/admission/call-center/agents'
+      preLoaderRoute: typeof AdmissionCallCenterAgentsRouteImport
+      parentRoute: typeof AdmissionCallCenterRoute
+    }
+    '/admission/call-center/leads': {
+      id: '/admission/call-center/leads'
+      path: '/leads'
+      fullPath: '/admission/call-center/leads'
+      preLoaderRoute: typeof AdmissionCallCenterLeadsRouteImport
+      parentRoute: typeof AdmissionCallCenterRoute
+    }
+    '/admission/call-center/my-leads': {
+      id: '/admission/call-center/my-leads'
+      path: '/my-leads'
+      fullPath: '/admission/call-center/my-leads'
+      preLoaderRoute: typeof AdmissionCallCenterMyLeadsRouteImport
+      parentRoute: typeof AdmissionCallCenterRoute
+    }
+    '/admission/call-center/reports': {
+      id: '/admission/call-center/reports'
+      path: '/reports'
+      fullPath: '/admission/call-center/reports'
+      preLoaderRoute: typeof AdmissionCallCenterReportsRouteImport
+      parentRoute: typeof AdmissionCallCenterRoute
+    }
+    '/admission/call-center/upload': {
+      id: '/admission/call-center/upload'
+      path: '/upload'
+      fullPath: '/admission/call-center/upload'
+      preLoaderRoute: typeof AdmissionCallCenterUploadRouteImport
+      parentRoute: typeof AdmissionCallCenterRoute
+    }
+    '/directors/skillai/': {
+      id: '/directors/skillai/'
+      path: '/skillai'
+      fullPath: '/directors/skillai/'
+      preLoaderRoute: typeof DirectorsSkillaiIndexRouteImport
+      parentRoute: typeof DirectorsRoute
+    }
+    '/directors/skillai/$': {
+      id: '/directors/skillai/$'
+      path: '/skillai/$'
+      fullPath: '/directors/skillai/$'
+      preLoaderRoute: typeof DirectorsSkillaiSplatRouteImport
+      parentRoute: typeof DirectorsRoute
+    }
   }
 }
 
+interface AdmissionAgentsRouteChildren {
+  AdmissionAgentsIdRoute: typeof AdmissionAgentsIdRoute
+  AdmissionAgentsIndexRoute: typeof AdmissionAgentsIndexRoute
+}
+
+const AdmissionAgentsRouteChildren: AdmissionAgentsRouteChildren = {
+  AdmissionAgentsIdRoute: AdmissionAgentsIdRoute,
+  AdmissionAgentsIndexRoute: AdmissionAgentsIndexRoute,
+}
+
+const AdmissionAgentsRouteWithChildren = AdmissionAgentsRoute._addFileChildren(
+  AdmissionAgentsRouteChildren,
+)
+
+interface AdmissionApplicationsRouteChildren {
+  AdmissionApplicationsIdRoute: typeof AdmissionApplicationsIdRoute
+}
+
+const AdmissionApplicationsRouteChildren: AdmissionApplicationsRouteChildren = {
+  AdmissionApplicationsIdRoute: AdmissionApplicationsIdRoute,
+}
+
+const AdmissionApplicationsRouteWithChildren =
+  AdmissionApplicationsRoute._addFileChildren(
+    AdmissionApplicationsRouteChildren,
+  )
+
+interface AdmissionCallCenterRouteChildren {
+  AdmissionCallCenterAgentsRoute: typeof AdmissionCallCenterAgentsRoute
+  AdmissionCallCenterLeadsRoute: typeof AdmissionCallCenterLeadsRoute
+  AdmissionCallCenterMyLeadsRoute: typeof AdmissionCallCenterMyLeadsRoute
+  AdmissionCallCenterReportsRoute: typeof AdmissionCallCenterReportsRoute
+  AdmissionCallCenterUploadRoute: typeof AdmissionCallCenterUploadRoute
+  AdmissionCallCenterIndexRoute: typeof AdmissionCallCenterIndexRoute
+}
+
+const AdmissionCallCenterRouteChildren: AdmissionCallCenterRouteChildren = {
+  AdmissionCallCenterAgentsRoute: AdmissionCallCenterAgentsRoute,
+  AdmissionCallCenterLeadsRoute: AdmissionCallCenterLeadsRoute,
+  AdmissionCallCenterMyLeadsRoute: AdmissionCallCenterMyLeadsRoute,
+  AdmissionCallCenterReportsRoute: AdmissionCallCenterReportsRoute,
+  AdmissionCallCenterUploadRoute: AdmissionCallCenterUploadRoute,
+  AdmissionCallCenterIndexRoute: AdmissionCallCenterIndexRoute,
+}
+
+const AdmissionCallCenterRouteWithChildren =
+  AdmissionCallCenterRoute._addFileChildren(AdmissionCallCenterRouteChildren)
+
+interface AdmissionRouteChildren {
+  AdmissionAgentsRoute: typeof AdmissionAgentsRouteWithChildren
+  AdmissionApplicationRoute: typeof AdmissionApplicationRoute
+  AdmissionApplicationsRoute: typeof AdmissionApplicationsRouteWithChildren
+  AdmissionCallCenterRoute: typeof AdmissionCallCenterRouteWithChildren
+  AdmissionFeeConcessionRoute: typeof AdmissionFeeConcessionRoute
+  AdmissionFinanceRoute: typeof AdmissionFinanceRoute
+  AdmissionFollowUpRoute: typeof AdmissionFollowUpRoute
+  AdmissionFormBuilderRoute: typeof AdmissionFormBuilderRoute
+  AdmissionLeadsRoute: typeof AdmissionLeadsRoute
+  AdmissionIndexRoute: typeof AdmissionIndexRoute
+}
+
+const AdmissionRouteChildren: AdmissionRouteChildren = {
+  AdmissionAgentsRoute: AdmissionAgentsRouteWithChildren,
+  AdmissionApplicationRoute: AdmissionApplicationRoute,
+  AdmissionApplicationsRoute: AdmissionApplicationsRouteWithChildren,
+  AdmissionCallCenterRoute: AdmissionCallCenterRouteWithChildren,
+  AdmissionFeeConcessionRoute: AdmissionFeeConcessionRoute,
+  AdmissionFinanceRoute: AdmissionFinanceRoute,
+  AdmissionFollowUpRoute: AdmissionFollowUpRoute,
+  AdmissionFormBuilderRoute: AdmissionFormBuilderRoute,
+  AdmissionLeadsRoute: AdmissionLeadsRoute,
+  AdmissionIndexRoute: AdmissionIndexRoute,
+}
+
+const AdmissionRouteWithChildren = AdmissionRoute._addFileChildren(
+  AdmissionRouteChildren,
+)
+
+interface DirectorsRouteChildren {
+  DirectorsActivityRoute: typeof DirectorsActivityRoute
+  DirectorsApprovalsRoute: typeof DirectorsApprovalsRoute
+  DirectorsDepartmentsRoute: typeof DirectorsDepartmentsRoute
+  DirectorsInstituteRoute: typeof DirectorsInstituteRoute
+  DirectorsNotificationsRoute: typeof DirectorsNotificationsRoute
+  DirectorsPerformanceRoute: typeof DirectorsPerformanceRoute
+  DirectorsProfileRoute: typeof DirectorsProfileRoute
+  DirectorsReportsRoute: typeof DirectorsReportsRoute
+  DirectorsSettingsRoute: typeof DirectorsSettingsRoute
+  DirectorsTasksRoute: typeof DirectorsTasksRoute
+  DirectorsIndexRoute: typeof DirectorsIndexRoute
+  DirectorsSkillaiSplatRoute: typeof DirectorsSkillaiSplatRoute
+  DirectorsSkillaiIndexRoute: typeof DirectorsSkillaiIndexRoute
+}
+
+const DirectorsRouteChildren: DirectorsRouteChildren = {
+  DirectorsActivityRoute: DirectorsActivityRoute,
+  DirectorsApprovalsRoute: DirectorsApprovalsRoute,
+  DirectorsDepartmentsRoute: DirectorsDepartmentsRoute,
+  DirectorsInstituteRoute: DirectorsInstituteRoute,
+  DirectorsNotificationsRoute: DirectorsNotificationsRoute,
+  DirectorsPerformanceRoute: DirectorsPerformanceRoute,
+  DirectorsProfileRoute: DirectorsProfileRoute,
+  DirectorsReportsRoute: DirectorsReportsRoute,
+  DirectorsSettingsRoute: DirectorsSettingsRoute,
+  DirectorsTasksRoute: DirectorsTasksRoute,
+  DirectorsIndexRoute: DirectorsIndexRoute,
+  DirectorsSkillaiSplatRoute: DirectorsSkillaiSplatRoute,
+  DirectorsSkillaiIndexRoute: DirectorsSkillaiIndexRoute,
+}
+
+const DirectorsRouteWithChildren = DirectorsRoute._addFileChildren(
+  DirectorsRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AcademicRoute: AcademicRoute,
+  AdminRoute: AdminRoute,
+  AdmissionRoute: AdmissionRouteWithChildren,
+  DirectorsRoute: DirectorsRouteWithChildren,
+  FinanceRoute: FinanceRoute,
+  HrRoute: HrRoute,
+  MarketingRoute: MarketingRoute,
+  SettingsRoute: SettingsRoute,
+  WorkspaceRoute: WorkspaceRoute,
+  AgentIdRoute: AgentIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
