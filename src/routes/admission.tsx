@@ -12,9 +12,9 @@ export const Route = createFileRoute("/admission")({
   head: () => ({
     meta: [
       { title: "Admission — Manager Edu" },
-      { name: "description", content: "Admission pipeline: agents, leads, call center, applications and finance desk." },
+      { name: "description", content: "Manage Skill AI admissions, agents, leads, applications and tuition finance." },
       { property: "og:title", content: "Admission — Manager Edu" },
-      { property: "og:description", content: "Admission pipeline: agents, leads, call center, applications and finance desk." },
+      { property: "og:description", content: "Manage Skill AI admissions, agents, leads, applications and tuition finance." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -29,7 +29,6 @@ const TABS: {
     | "/admission/follow-up"
     | "/admission/leads"
     | "/admission/applications"
-    | "/admission/finance"
     | "/admission/form-builder"
     | "/admission/fee-concession"
     | "/admission/call-center";
@@ -42,7 +41,6 @@ const TABS: {
   { to: "/admission/leads", label: "Lead Pool" },
   { to: "/admission/call-center", label: "Call Center" },
   { to: "/admission/applications", label: "Skill AI Admissions" },
-  { to: "/admission/finance", label: "Finance Desk" },
   { to: "/admission/form-builder", label: "Form Builder" },
   { to: "/admission/fee-concession", label: "Fee Concession" },
 ];
