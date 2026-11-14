@@ -36,7 +36,7 @@ const inputCls = "mt-1 h-9 w-full rounded-lg border bg-background px-2.5 text-sm
 
 const APPROVERS: { key: ApproverKey; title: string; short: string }[] = [
   { key: "salesHead", title: "Sales Head", short: "SH" },
-  { key: "manager", title: "Manager", short: "M" },
+  { key: "manager", title: "Manager", short: "F" },
   { key: "director", title: "Director & CEO", short: "CEO" },
 ];
 
