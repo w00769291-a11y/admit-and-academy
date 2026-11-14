@@ -192,19 +192,6 @@ export function FeeConcessionForm() {
             </div>
           </Section>
 
-          <Section title="03 · Office Review & Approval">
-            <div className="grid gap-3 sm:grid-cols-3">
-              {APPROVERS.map((a) => (
-                <div key={a.key} className="rounded-xl border border-dashed border-border bg-background/50 px-4 py-6 text-center">
-                  <p className="text-xs font-bold uppercase tracking-wide text-skill-accent">{a.title}</p>
-                  <div className="h-10" />
-                  <p className="text-xs text-muted-foreground">Sign from the saved list below</p>
-                </div>
-              ))}
-            </div>
-            <p className="mt-4 text-center text-[11px] italic text-muted-foreground">CONFIDENTIAL • For Internal Administrative Use Only</p>
-          </Section>
-
           <div className="flex flex-wrap items-center gap-2">
             <button onClick={save} disabled={!canSave}
               className={cn("flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-semibold transition",
